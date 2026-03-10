@@ -96,67 +96,114 @@
 
     /* ── HERO ── */
     .hero {
-      padding: 110px clamp(1.5rem, 5vw, 4rem) 0;
-      display: grid; grid-template-columns: 1.1fr 1fr;
-      gap: 0; min-height: 88vh; align-items: center;
+      padding: 130px clamp(1.5rem, 5vw, 4rem) 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5vw;
+      min-height: 92vh;
+      align-items: center;
       animation: fadeUp .7s .1s ease both;
     }
     .hero-left {
-      padding-right: 4vw;
-      border-right: 1px solid var(--sand2);
+      display: flex; flex-direction: column; justify-content: center;
     }
-    .hero-issue {
-      display: inline-flex; align-items: center; gap: .6rem;
-      font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 2rem;
+    .hero-kicker {
+      display: inline-flex; align-items: center; gap: .7rem;
+      font-size: .68rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--rust); margin-bottom: 2.2rem;
     }
-    .hero-issue::before {
-      content: '';
-      display: inline-block; width: 22px; height: 1px; background: var(--accent);
+    .hero-kicker span {
+      display: inline-block; width: 28px; height: 1px; background: var(--rust);
     }
     .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.8rem, 4.5vw, 5rem);
-      font-weight: 400; line-height: 1.08; letter-spacing: -.01em;
-      margin-bottom: 1.8rem;
+      font-size: clamp(3rem, 5vw, 5.5rem);
+      font-weight: 400; line-height: 1.05; letter-spacing: -.02em;
+      margin-bottom: 1.6rem;
     }
-    .hero-title em { font-style: italic; color: var(--dusk); }
-    .hero-desc {
-      color: var(--mid); font-size: 1rem; max-width: 38ch;
-      line-height: 1.85; margin-bottom: 2.5rem;
+    .hero-title em { font-style: italic; color: var(--rust); }
+    .hero-tagline {
+      font-size: 1rem; color: var(--mid);
+      line-height: 1.8; max-width: 36ch;
+      margin-bottom: 3rem;
+      border-left: 2px solid var(--sand2);
+      padding-left: 1.2rem;
     }
-    .hero-actions { display: flex; gap: 1.2rem; align-items: center; }
-    .btn-read {
-      font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
-      background: var(--accent); color: #fff;
-      border: none; padding: .8rem 2rem; cursor: pointer;
-      font-family: 'Karla', sans-serif; transition: background .2s;
-      border-radius: 6px;
-    }
-    .btn-read:hover { background: var(--ink); }
-    .btn-scroll {
-      font-size: .72rem; letter-spacing: .08em; text-transform: uppercase;
+    .hero-scroll {
+      font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
       color: var(--muted); background: none; border: none;
       cursor: pointer; font-family: 'Karla', sans-serif;
-      display: flex; align-items: center; gap: .5rem; transition: color .2s;
+      display: inline-flex; align-items: center; gap: .6rem;
+      transition: color .2s; padding: 0;
     }
-    .btn-scroll:hover { color: var(--ink); }
-    .btn-scroll::after { content: '↓'; }
+    .hero-scroll:hover { color: var(--ink); }
+    .hero-scroll::after { content: '↓'; font-size: .9rem; }
 
-    /* ── HERO ILLUSTRATION ── */
+    /* ── HERO RIGHT — mascot + latest post ── */
     .hero-right {
-      display: flex; align-items: center; justify-content: center;
-      padding: 2rem 2rem 0;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 2.5rem;
     }
     .hero-illustration {
-      width: 100%;
-      max-width: 480px;
+      width: 100%; max-width: 340px;
       animation: floatUp 6s ease-in-out infinite;
     }
-    /* dark mode: invert the near-white background of the illustration subtly */
-    html.dark .hero-illustration {
-      filter: brightness(.88) saturate(.9);
+    html.dark .hero-illustration { filter: brightness(.88) saturate(.9); }
+
+    /* ── LATEST POST CARD ── */
+    .hero-latest {
+      width: 100%;
+      background: var(--cream);
+      border: 1px solid var(--sand2);
+      border-radius: 16px;
+      padding: 1.6rem 1.8rem;
+      text-decoration: none; color: inherit;
+      display: block;
+      transition: transform .2s, box-shadow .2s;
+      position: relative;
+      overflow: hidden;
     }
+    .hero-latest::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, var(--rust), var(--olive));
+    }
+    .hero-latest:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,.1);
+    }
+    .hl-label {
+      font-size: .62rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--rust); margin-bottom: .8rem;
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .hl-label::before {
+      content: ''; display: inline-block;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--rust);
+    }
+    .hl-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; font-weight: 400; line-height: 1.35;
+      margin-bottom: .7rem;
+    }
+    .hl-excerpt {
+      font-size: .82rem; color: var(--mid);
+      line-height: 1.7; margin-bottom: 1rem;
+      display: -webkit-box; -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .hl-meta {
+      font-size: .62rem; letter-spacing: .06em;
+      color: var(--muted); display: flex; gap: .5rem; align-items: center;
+    }
+    .hl-arrow {
+      position: absolute; bottom: 1.4rem; right: 1.6rem;
+      font-size: 1rem; color: var(--sand2);
+      transition: color .2s, transform .2s;
+    }
+    .hero-latest:hover .hl-arrow { color: var(--rust); transform: translate(3px, -3px); }
 
     @keyframes floatUp {
       0%, 100% { transform: translateY(0); }
@@ -381,10 +428,10 @@
     }
 
     @media (max-width: 860px) {
-      .hero { grid-template-columns: 1fr; min-height: auto; padding-bottom: 0; }
-      .hero-left { border-right: none; padding-right: 0; }
-      .hero-right { padding: 2rem 0 0; }
-      .hero-illustration { max-width: 320px; }
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 100px; padding-bottom: 2rem; gap: 2.5rem; }
+
+      .hero-right { flex-direction: row; flex-wrap: wrap; gap: 1.5rem; }
+      .hero-illustration { max-width: 130px; flex-shrink: 0; align-self: flex-start; }
       .posts-grid { grid-template-columns: 1fr; }
       .post-card.featured { flex-direction: column; grid-column: span 1; }
       .newsletter { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem; margin: 1.5rem; }
@@ -419,22 +466,26 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <p class="hero-issue" id="hero-issue">Latest issue</p>
+    <p class="hero-kicker"><span></span>Rascunho</p>
     <h1 class="hero-title">
-      Sketching<br>
-      <em>systems</em> in<br>
-      public
+      Sketching<br><em>systems</em><br>in public
     </h1>
-    <p class="hero-desc">
-      Thinking through systems in public.
-    </p>
-    <div class="hero-actions">
-      <button class="btn-read" onclick="document.getElementById('posts').scrollIntoView({behavior:'smooth'})">Read latest</button>
-      <button class="btn-scroll" onclick="document.getElementById('posts').scrollIntoView({behavior:'smooth'})">Browse all</button>
-    </div>
+    <p class="hero-tagline">Thinking through systems in public — APIs, architecture, and the messy middle of building things.</p>
+    <button class="hero-scroll" onclick="document.getElementById('posts').scrollIntoView({behavior:'smooth'})">Browse all articles</button>
   </div>
   <div class="hero-right">
-    <img class="hero-illustration" src="donkey.png" alt="Rascunho mascot — a techy donkey building systems"/>
+    <!-- <img class="hero-illustration" src="donkey.png" alt="Rascunho mascot"/> -->
+    <a class="hero-latest" id="hero-latest" href="#" style="display:none">
+      <span class="hl-label">Latest post</span>
+      <p class="hl-title" id="hl-title"></p>
+      <p class="hl-excerpt" id="hl-excerpt"></p>
+      <div class="hl-meta">
+        <span id="hl-cat"></span>
+        <span>·</span>
+        <span id="hl-date"></span>
+      </div>
+      <span class="hl-arrow">↗</span>
+    </a>
   </div>
 </section>
 
@@ -499,7 +550,7 @@
     try {
       const res = await fetch('posts.json');
       allPosts = await res.json();
-      allPosts.sort((a,b) => new Date(a.date) - new Date(b.date));
+      allPosts.sort((a,b) => new Date(b.date) - new Date(a.date));
       filteredPosts = [...allPosts];
       renderHeroEyebrow();
       renderFilters();
@@ -512,8 +563,14 @@
 
   function renderHeroEyebrow() {
     if (!allPosts.length) return;
-    document.getElementById('hero-issue').textContent =
-      'Latest — ' + new Date(allPosts[0].date + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+    const p = allPosts[0];
+    const card = document.getElementById('hero-latest');
+    document.getElementById('hl-title').textContent = p.title;
+    document.getElementById('hl-excerpt').textContent = p.excerpt;
+    document.getElementById('hl-cat').textContent = p.category;
+    document.getElementById('hl-date').textContent = formatDate(p.date);
+    card.href = 'post.html?file=' + p.file;
+    card.style.display = 'block';
   }
 
   function renderFilters() {
@@ -544,10 +601,11 @@
     list.innerHTML = slice.map((p, i) => {
       const featured = i === 0 && filteredPosts === allPosts;
       const color = COLORS[i % COLORS.length];
+      const num = filteredPosts.length - i; // newest = highest, oldest = 01
       return `
         <a class="post-card ${featured ? 'featured' : ''}" href="post.html?file=${p.file}"
            data-color="${color}" style="animation-delay:${i * 0.07}s">
-          <div class="pc-number">${String(i + 1).padStart(2, '0')}</div>
+          <div class="pc-number">${String(num).padStart(2, '0')}</div>
           <div class="pc-text">
             <p class="pc-cat">${p.category}</p>
             <h3 class="pc-title">${p.title}</h3>

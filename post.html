@@ -159,13 +159,18 @@
 
     .post-body code {
       font-family: 'Courier New', monospace; font-size: .88em;
-      background: var(--sand); padding: .15em .4em, color;
+      background: var(--sand); padding: .15em .4em;
     }
     .post-body pre {
-      background: var(--ink); color: #e8e3d9;
+      background: #1a2744; color: #d8e4f8;
       padding: 1.8rem; overflow-x: auto; margin-bottom: 1.8rem;
     }
-    .post-body pre code { background: none; padding: 0; color: inherit; font-size: .85rem; }
+
+    html.dark .post-body pre { background: #0d1118; color: #d8e4f8; }
+    .post-body pre code { background: none !important; padding: 0 !important; color: #d8e4f8 !important; font-size: .85rem; }
+    html.dark .post-body pre code { background: none !important; color: #d8e4f8 !important; }
+    html.dark .post-body pre code * { color: #d8e4f8 !important; background: none !important; }
+    html.dark .post-body code { background: #1e2a3e !important; color: #d8e4f8 !important; }
 
     .post-body hr {
       border: none; border-top: 1px solid var(--sand2); margin: 3rem 0;
@@ -294,7 +299,7 @@
 
 <footer>
   <div class="footer-logo">Rascunho</div>
-  <div class="footer-copy">© 2026 Rascunho</div>
+  <div class="footer-copy">© 2026 Ether</div>
 </footer>
 
 <script>
