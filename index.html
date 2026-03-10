@@ -499,7 +499,7 @@
     try {
       const res = await fetch('posts.json');
       allPosts = await res.json();
-      allPosts.sort((a,b) => new Date(b.date) - new Date(a.date));
+      allPosts.sort((a,b) => new Date(a.date) - new Date(b.date));
       filteredPosts = [...allPosts];
       renderHeroEyebrow();
       renderFilters();
