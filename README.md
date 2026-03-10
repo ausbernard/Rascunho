@@ -1,4 +1,4 @@
-# Rascunho Blog — Setup & Usage Guide
+# Rascunho Blog
 
 **Sketching systems in public**
 A blog about thinking through systems, one post at a time.
