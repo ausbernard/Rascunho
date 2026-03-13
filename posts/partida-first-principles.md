@@ -85,4 +85,4 @@ This is uncomfortable. It's slower. It forces me to admit what I don't know. But
 I landed on HTMX, FastAPI, and AlchemySQL. Check out the next series for the thoughts.
 
 
-→ **[Partida - The Stack](/post.html?file=partida-the-stack.md)**
+→ **[Partida - The Stack](post.html?file=partida-the-stack.md)**

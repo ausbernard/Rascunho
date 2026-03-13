@@ -94,7 +94,7 @@ At its core, Partida is simple: a document tracker for people navigating the imm
 
 The first thing I built was the document tracker. Just a clean table showing what we had and what was missing. Basic CRUD stuff. Nothing fancy. I wish I'd taken pictures of that first prototype.
 
-![First Design](/posts/screenshots/partida-first-diagram-design.png "first design ")
+![First Design](posts/screenshots/partida-first-diagram-design.png "first design ")
 
 
 Coming off the interview, I'd been deep in Python API practice, so I stayed in that lane. I built an in-memory database with Python dictionaries. Functions for business logic. API routes to wire it all together. Tested every endpoint with cURL like it was 1999. Simple. Functional. Mine.
@@ -107,7 +107,7 @@ Claude gave me a mockup.
 
 I loved it.
 
-![First Mockup](/posts/screenshots/partida-first-mockup.webp "first mockup ")
+![First Mockup](posts/screenshots/partida-first-mockup.webp "first mockup ")
 
 From there, the stack fell into place. I wanted something that felt like mine—not what I build at work, but what I want to build:
 
@@ -126,8 +126,8 @@ Nothing exotic. Just enough to move fast and solve the problem.
 
 ## Next in the series
 
-→ **[Partida - First Principles](/post.html?file=partida-first-principles.md)**
+→ **[Partida - First Principles](post.html?file=partida-first-principles.md)**
 
-→ **[Partida - The Stack](/post.html?file=partida-the-stack.md)**
+→ **[Partida - The Stack](post.html?file=partida-the-stack.md)**
 
 Building Partida meant choosing tools that fit me—not what's popular, not what I use at work. Here's why I picked what I picked.
