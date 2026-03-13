@@ -99,5 +99,5 @@ Still learning. Still outside my comfort zone. But it works.
 
 ## Next in the series
 
-→ **[Partida - Reveal](/post.html?file=partida-reveal.md)**
+→ **[Partida - Reveal](/post.html?file=post/partida-reveal.md)**
 

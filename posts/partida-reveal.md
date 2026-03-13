@@ -15,7 +15,7 @@ Today, it actually runs. ✨
 
 ## Tracker
 
-![Partida Tracker Dashboard](/posts/screenshots/partida-first-deploy.png)
+![Partida Tracker Dashboard](posts/screenshots/partida-first-deploy.png)
 
 **What you're looking at:**
 - A family group with documents
@@ -70,7 +70,7 @@ personal_documents = {
 ```
 SQLAlchemy now handles persistence. FastAPI serves HTML directly, and HTMX swaps in updates. The Claude-generated frontend evolved as I connected real data.
 
-![SQLAlchemy Schema](/posts/screenshots/partida-alchemy.png)
+![SQLAlchemy Schema](posts/screenshots/partida-alchemy.png)
 
 ### What Breaks First
 
@@ -144,11 +144,11 @@ My partner likes learning via flashcards. As we dive into learning Portuguese, s
 
 Pulled a nice json of 500 Portuguese verbs from [GitHub](https://github.com/jfoclpf/words-pt?tab=readme-ov-file), added a database table, wrote some API routes, passed those to the frontend and golden!
 
-![Partida Verb Learner](/posts/screenshots/partida-verb-front.png)
+![Partida Verb Learner](posts/screenshots/partida-verb-front.png)
 
 A flashcard. A verb. Click the card.
 
-![Partida Verb Learner Back](/posts/screenshots/partida-verb-back.png)
+![Partida Verb Learner Back](posts/screenshots/partida-verb-back.png)
 
 That's it. No complexity. No over-engineering. Just a small feature for one person that cost almost nothing to build because the foundation was already there.
 This is the joy of building your own tools.
