@@ -68,7 +68,7 @@ I needed something clean, modern, and simple enough that my family could actuall
 
 I drew sketches. They were... not good.
 
-![Partida Sketch Bad](/posts/screenshots/partida-sketch.JPG "Bad First Sketch")
+![Partida Sketch Bad](posts/screenshots/partida-sketch.JPG "Bad First Sketch")
 
 I stared at it. Then I thought: I wonder how Claude would visualize this.
 

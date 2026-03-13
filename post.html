@@ -391,7 +391,7 @@
         <p class="related-label">More to read</p>
         <div class="related-grid">
           ${related.map(p => `
-            <a class="related-card" href="post.html?file=${p.file}">
+            <a class="related-card" href="post.html?file=post/${p.file}">
               <p class="related-cat">${p.category}</p>
               <p class="related-title">${p.title}</p>
             </a>`).join('')}
